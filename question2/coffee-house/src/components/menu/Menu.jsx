@@ -1,9 +1,9 @@
 import React from "react";
 import "./Menu.css";
 
-const Menu = () => {
+const Menu = ({ addItem }) => {
   return (
-    <div className="container">
+    <div className="body-container">
       <section>
         <p>Order here:</p>
         <table>
@@ -17,7 +17,7 @@ const Menu = () => {
           </tr>
           <tr>
             <th>Espresso</th>
-            <td>60</td>
+            <td onClick={() => addItem("Espresso", "Milk", 60)}>60</td>
             <td>75</td>
             <td>100</td>
           </tr>

@@ -39,3 +39,9 @@ th {
 td {
   background-color: rgb(200, 255, 237);
 }
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
