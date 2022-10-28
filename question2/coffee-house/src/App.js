@@ -10,27 +10,21 @@ function App() {
   const [orderArr, setOrderArr] = useState([]);
   const [bill, setBill] = useState(0);
 
-  // class Orders {
-  //   constructor(id, name, addOn, price) {
-  //     this.id = id;
-  //     this.name = name;
-  //     this.addOn = addOn;
-  //     this.price = price;
-  //   }
-  // }
+  class Orders {
+    constructor(id, name, addOn, price) {
+      this.id = id;
+      this.name = name;
+      this.addOn = addOn;
+      this.price = price;
+    }
+  }
 
   const addItem = (name, addOn, price) => {
     const id = uuidv4();
 
-    setOrderArr([
-      ...orderArr,
-      {
-        id,
-        name,
-        addOn,
-        price,
-      },
-    ]);
+    const order = new Orders(id, name, addOn, price);
+
+    setOrderArr([...orderArr, order]);
 
     const currentBill = bill;
     const newBill = currentBill + price;
