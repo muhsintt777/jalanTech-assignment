@@ -9,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding-bottom: 70px;
 }
 
 code {
@@ -52,4 +54,14 @@ td:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+footer {
+  background-color: aliceblue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0px;
+  text-align: center;
+  box-shadow: 0 0 5px;
 }

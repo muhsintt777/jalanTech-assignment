@@ -1,1 +1,8 @@
+.orderList-section__para1 {
+  margin-bottom: 10px;
+}
 
+.orderList-section__para2 {
+  text-align: center;
+  color: red;
+}

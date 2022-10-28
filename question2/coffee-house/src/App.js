@@ -4,15 +4,11 @@ import { v4 as uuidv4 } from "uuid";
 import Header from "./components/header/Header";
 import Menu from "./components/menu/Menu";
 import OrderList from "./components/orderList/OrderList";
+import Footer from "./components/footer/Footer";
 
 function App() {
-  const [orderArr, setOrderArr] = useState([
-    { id: "1", name: "Espresso", addOn: "Milk", price: 60 },
-    { id: "2", name: "Espresso", addOn: "Milk", price: 60 },
-    { id: "3", name: "olakka", addOn: "chakka", price: 100 },
-    { id: "4", name: "olakka", addOn: "chakka", price: 100 },
-    { id: "5", name: "olakka", addOn: "chakka", price: 100 },
-  ]);
+  const [orderArr, setOrderArr] = useState([]);
+  const [bill, setBill] = useState(0);
 
   // class Orders {
   //   constructor(id, name, addOn, price) {
@@ -35,6 +31,10 @@ function App() {
         price,
       },
     ]);
+
+    const currentBill = bill;
+    const newBill = currentBill + price;
+    setBill(newBill);
   };
 
   const deleteItem = (id) => {
@@ -46,7 +46,13 @@ function App() {
     <div className="App">
       <Header />
       <Menu addItem={addItem} />
-      <OrderList orderArr={orderArr} deleteItem={deleteItem} />
+      <OrderList
+        orderArr={orderArr}
+        deleteItem={deleteItem}
+        bill={bill}
+        setBill={setBill}
+      />
+      <Footer bill={bill} />
     </div>
   );
 }
