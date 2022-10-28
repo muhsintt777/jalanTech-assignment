@@ -1,16 +1,12 @@
 import React from "react";
+import OrderItem from "./orderItem/OrderItem";
 import "./OrderList.css";
 
-const OrderList = ({ orderArr }) => {
+const OrderList = ({ orderArr, deleteItem }) => {
   const renderedItems = orderArr.map((order) => (
-    <article key={order.id}>
-      <p>
-        Item: {order.name} Add-on: {order.addOn}
-      </p>
-      <p>{order.price} $</p>
-      <button>Delete</button>
-    </article>
+    <OrderItem key={order.id} order={order} deleteItem={deleteItem} />
   ));
+
   return (
     <div className="body-container">
       <section>

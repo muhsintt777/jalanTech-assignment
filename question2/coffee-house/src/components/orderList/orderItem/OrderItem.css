@@ -1,0 +1,13 @@
+.orderItem-article {
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.orderItem-article > p {
+  flex: 1;
+}

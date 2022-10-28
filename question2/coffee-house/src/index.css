@@ -19,6 +19,9 @@ code {
 section {
   width: 80%;
   box-shadow: 0 0 4px;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
 table,
@@ -38,6 +41,11 @@ th {
 
 td {
   background-color: rgb(200, 255, 237);
+  cursor: pointer;
+}
+td:hover {
+  background-color: aliceblue;
+  font-weight: 500;
 }
 
 .body-container {
